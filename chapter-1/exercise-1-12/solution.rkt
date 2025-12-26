@@ -5,8 +5,14 @@
 ;;; See: https://sicp.hexlet.io/exercises/1.12
 
 ;;; BEGIN SOLUTION
-;;; Write your solution here
-;;; Example:
-;;; (define (solution x)
-;;;   ...)
+(define (solution row col)
+  (cond (( = col 1) 1)
+        (( = col row) 1)
+        (( > col row) 0)
+        ((+
+         (solution (- row 1) (- col 1))
+         (solution (- row 1) col)
+         )) MISTAKE
+  )
+)
 ;;; END SOLUTION
